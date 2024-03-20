@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour
     private Rigidbody rb;
     private Vector2 moveValue;
 
-    public float speed = 5f;
+    public float speed = 20f;
     public float jumpForce = 10f;
     private bool isJumped = false;
 
