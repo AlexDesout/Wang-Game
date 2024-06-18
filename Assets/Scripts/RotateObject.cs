@@ -4,7 +4,16 @@ public class RotateObject : MonoBehaviour
 {
     public float rotationSpeed = 10f; // Vitesse de rotation normale
     public float rotationSpeedNearPlayer = 20f; // Vitesse de rotation lorsque le joueur est à proximité
+    public float detectionRadius = 2.0f; // Rayon de détection pour le joueur
     private bool playerNearby = false; // Indicateur si le joueur est à proximité
+
+    void Start()
+    {
+        // Ajouter un SphereCollider pour la détection du joueur
+        SphereCollider detectionCollider = gameObject.AddComponent<SphereCollider>();
+        detectionCollider.isTrigger = true;
+        detectionCollider.radius = detectionRadius;
+    }
 
     void Update()
     {
