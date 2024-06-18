@@ -5,13 +5,13 @@ public class GameManager : MonoBehaviour
 {
     void Start()
     {
-
+        // Cette méthode peut être vide si vous n'avez rien à initialiser
     }
 
     public void DemarrerPartie()
     {
-        // Charger la scène de jeu lorsque le bouton "Commencer la partie" est cliqué
-        SceneManager.LoadScene("SampleScene", LoadSceneMode.Single);
+        // Charger la scène de jeu "Level1" lorsque le bouton "Commencer la partie" est cliqué
+        SceneManager.LoadScene("Lvl1", LoadSceneMode.Single);
     }
 
     public void QuitterJeu()

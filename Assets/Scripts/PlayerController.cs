@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     private Vector2 moveValue;
     private bool isCrouching = false;
     private Vector3 startPosition;
+    private GameObject carriedSphere = null; // Référence à la sphère transportée par le joueur
 
     public float speed = 5f;
     public float jumpForce = 10f;
@@ -61,6 +62,32 @@ public class PlayerController : MonoBehaviour
     public void OnJump(InputValue value)
     {
         isJumping = true;
+    }
+
+    public void OnGrab(InputValue value)
+    {
+        if (carriedSphere != null)
+        {
+            // Si une sphère est déjà transportée, lâcher la sphère
+            carriedSphere.GetComponent<BallColorChangeAndJump>().SetBeingCarried(false);
+            carriedSphere = null;
+        }
+        else
+        {
+            // Détecter les sphères à proximité
+            Collider[] hitColliders = Physics.OverlapSphere(transform.position, 0.3f); // Rayon de détection de 2 unités
+            foreach (var hitCollider in hitColliders)
+            {
+                if (hitCollider.gameObject.CompareTag("Ball"))
+                {
+                    carriedSphere = hitCollider.gameObject;
+                    carriedSphere.GetComponent<BallColorChangeAndJump>().SetBeingCarried(true); // Marquer la balle comme tenue par le joueur
+                    carriedSphere.transform.SetParent(transform); // Attacher la sphère au joueur
+                    carriedSphere.transform.localPosition = new Vector3(0, 2f, 0); // Placer la sphère au-dessus du joueur
+                    break;
+                }
+            }
+        }
     }
 
     void OnCollisionEnter(Collision collision)

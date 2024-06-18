@@ -8,6 +8,9 @@ TagManager:
   - Plateforme
   - mur
   - sol
+  - Ball
+  - Totem
+  - key
   layers:
   - Default
   - TransparentFX

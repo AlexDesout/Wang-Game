@@ -360,7 +360,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1810502082}
+      - m_Target: {fileID: 1810502084}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: DemarrerPartie
         m_Mode: 1
@@ -660,7 +660,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1810502082}
+      - m_Target: {fileID: 1810502084}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: QuitterJeu
         m_Mode: 1
@@ -973,7 +973,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1810502083}
-  - component: {fileID: 1810502082}
+  - component: {fileID: 1810502084}
   m_Layer: 0
   m_Name: ancre
   m_TagString: Untagged
@@ -981,18 +981,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1810502082
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1810502081}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f51b0a87346ef349bc64bcd1fbb95e5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1810502083
 Transform:
   m_ObjectHideFlags: 0
@@ -1008,6 +996,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1810502084
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1810502081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f51b0a87346ef349bc64bcd1fbb95e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2064284517
 GameObject:
   m_ObjectHideFlags: 0
