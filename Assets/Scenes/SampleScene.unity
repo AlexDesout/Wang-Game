@@ -15376,7 +15376,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   directionalLight: {fileID: 705507994}
   intensityDecreaseAmount: 0.2
-  panelGameOver: {fileID: 0}
+  panel_game_over: {fileID: 52644558}
   delayBeforeTeleport: 2
 --- !u!1001 &1196560583
 PrefabInstance:
