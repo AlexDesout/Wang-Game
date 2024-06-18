@@ -69,7 +69,7 @@ public class PlayerController : MonoBehaviour
         else
         {
             // Détecter les sphères à proximité
-            Collider[] hitColliders = Physics.OverlapSphere(transform.position, 1.0f); // Rayon de détection de 2 unités
+            Collider[] hitColliders = Physics.OverlapSphere(transform.position, 0.3f); // Rayon de détection de 2 unités
             foreach (var hitCollider in hitColliders)
             {
                 if (hitCollider.gameObject.CompareTag("Ball"))
