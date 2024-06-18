@@ -147,7 +147,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b1e075af499b442fa979fad0c6d6919, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  newColor: {r: 0.11025798, g: 0.6509434, b: 0.1013261, a: 1}
+  originalColor: {r: 1, g: 0, b: 0, a: 1}
+  grabbedColor: {r: 0, g: 0.78431374, b: 0.06666667, a: 1}
+  jumpForce: 2
 --- !u!135 &5172161469927257329
 SphereCollider:
   m_ObjectHideFlags: 0

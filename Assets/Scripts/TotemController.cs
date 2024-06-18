@@ -5,7 +5,7 @@ public class TotemController : MonoBehaviour
     public Color activatedColor = Color.blue; // Couleur lorsque le totem est activé par une balle
     public Color deactivatedColor = Color.white; // Couleur par défaut du totem
     public float detectionRadius = 2.0f; // Rayon de détection pour les balles
-    public PlatformMovement associatedPlatform; // Référence à la plateforme associée
+    public PlatformController associatedPlatform; // Référence à la plateforme associée
 
     private Renderer totemRenderer;
     private SphereCollider detectionCollider;
@@ -31,7 +31,7 @@ public class TotemController : MonoBehaviour
             // Change la couleur du totem lorsqu'une balle est à proximité
             totemRenderer.material.color = activatedColor;
 
-            // Activer le mouvement de la plateforme associée
+            // Activer la plateforme associée si elle est définie
             if (associatedPlatform != null)
             {
                 associatedPlatform.ActivateMovement();
@@ -47,11 +47,11 @@ public class TotemController : MonoBehaviour
             // Rétablit la couleur par défaut du totem lorsque la balle s'éloigne
             totemRenderer.material.color = deactivatedColor;
 
-            // Désactiver le mouvement de la plateforme associée
             if (associatedPlatform != null)
             {
                 associatedPlatform.DeactivateMovement();
             }
+
         }
     }
 }
