@@ -18,5 +18,6 @@ public class GameManager : MonoBehaviour
     {
         // Quitter l'application lorsque le bouton "Quitter le jeu" est cliqué (fonctionne dans un build, pas dans l'éditeur Unity)
         Application.Quit();
+        Debug.Log("Je quite le jeu");
     }
 }
